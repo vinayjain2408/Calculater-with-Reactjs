@@ -2,47 +2,64 @@ import React, { useState } from 'react'
 import "./App.css"
 
 function App() {
-  const [value , setValue] = useState(0)
 
-  function handlebutton(e){
-    console.log(e.target.value)
-    setValue(e.target.value)
+	const [result, setResult] = useState("");
+
+	// const ops = ['/', '*', '-', '+', '.'];
+
+	const updateCalc = (value) => {
+
+    setResult([...result , value])
+	}
+
+  function handleClear(){
+    setResult("")
   }
+
+
+  const calculate = () => {
+    // console.log(eval(...result))
+		// setResult(eval(result).toString());
+    console.log(eval(result.join("")))
+    setResult(eval(result.join("")))
+    
+	}
+
 
   return (
     <div className='box'>
       <div className='space'>
-        <p>{value}</p>
+        <p>{result}</p>
       </div>
       <div className='first-line'>
-        <button className='clear'>AC</button>
-        <button>()</button>
-        <button>%</button>
-        <button>/</button>
+        <button className='clear' onClick={handleClear}>AC</button>
+        <button onClick={() => updateCalc("()")}>()</button>
+        <button onClick={() => updateCalc("%")}>%</button>
+        <button onClick={() => updateCalc("/")}>/</button>
       </div>
       <div className='second-line'>
-        <button onChange={handlebutton}>7</button>
-        <button onChange={handlebutton}>8</button>
-        <button onChange={handlebutton}>9</button>
-        <button onChange={handlebutton}>*</button>
+        <button onClick={() => updateCalc("7")}>7</button>
+        <button onClick={() => updateCalc("8")}>8</button>
+        <button onClick={() => updateCalc("9")}>9</button>
+        <button onClick={() => updateCalc("*")}>*</button>
       </div>
       <div className='third-line'>
-        <button onChange={handlebutton}>4</button>
-        <button onChange={handlebutton}>5</button>
-        <button>6</button>
-        <button>-</button>
+        <button onClick={() => updateCalc("4")}>4</button>
+        <button onClick={() => updateCalc("5")}>5</button>
+        <button onClick={() => updateCalc("6")}>6</button>
+        <button onClick={() => updateCalc("-")}>-</button>
       </div>
       <div className='fourth-line'>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>+</button>
+        <button onClick={() => updateCalc("1")}>1</button>
+        <button onClick={() => updateCalc("2")}>2</button>
+        <button onClick={() => updateCalc('3')}>3</button>
+        <button onClick={() => updateCalc("+")}>+</button>
       </div>
       <div className='fiveth-line'>
-        <button>0</button>
-        <button>.</button>
-        <button>X</button>
-        <button>=</button>
+        <button onClick={() => updateCalc('0')}>0</button>
+        <button onClick={() => updateCalc('.')}>.</button>
+        <button >X</button>
+        <button onClick={calculate}>=</button>
       </div>
 
     </div>
