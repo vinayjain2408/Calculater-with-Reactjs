@@ -26,7 +26,8 @@ function App() {
 	}
 
   function handledelte(){
-    
+    result.pop()
+    setResult([...result])
   }
 
 
