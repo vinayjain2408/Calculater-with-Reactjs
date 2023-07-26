@@ -25,6 +25,10 @@ function App() {
     
 	}
 
+  function handledelte(){
+    
+  }
+
 
   return (
     <div className='box'>
@@ -58,7 +62,7 @@ function App() {
       <div className='fiveth-line'>
         <button onClick={() => updateCalc('0')}>0</button>
         <button onClick={() => updateCalc('.')}>.</button>
-        <button >X</button>
+        <button onClick={handledelte}>X</button>
         <button onClick={calculate}>=</button>
       </div>
 
