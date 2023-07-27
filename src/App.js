@@ -1,19 +1,20 @@
 import React, { useState } from 'react'
+import BackspaceIcon from '@mui/icons-material/Backspace';
 import "./App.css"
 
 function App() {
 
-	const [result, setResult] = useState("");
+	const [result, setResult] = useState([]);
 
 	// const ops = ['/', '*', '-', '+', '.'];
 
 	const updateCalc = (value) => {
-
-    setResult([...result , value])
-	}
+    setResult([...result, value]);
+    console.log(result)
+  };
 
   function handleClear(){
-    setResult("")
+    setResult([])
   }
 
 
@@ -21,12 +22,17 @@ function App() {
     // console.log(eval(...result))
 		// setResult(eval(result).toString());
     console.log(eval(result.join("")))
-    setResult(eval(result.join("")))
+    let total=eval(result?.join(""))
+    setResult([total]);
+    console.log('result',result)
+
     
 	}
 
   function handledelte(){
     result.pop()
+    // console.log(result.pop())
+    console.log([...result])
     setResult([...result])
   }
 
@@ -63,7 +69,7 @@ function App() {
       <div className='fiveth-line'>
         <button onClick={() => updateCalc('0')}>0</button>
         <button onClick={() => updateCalc('.')}>.</button>
-        <button onClick={handledelte}>X</button>
+        <button onClick={handledelte}><BackspaceIcon /> </button>
         <button onClick={calculate}>=</button>
       </div>
 
