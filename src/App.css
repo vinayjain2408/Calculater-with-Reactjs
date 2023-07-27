@@ -15,31 +15,31 @@
 
 .clear{
   background-color: green;
-  height: 70px;
-  width: 160px;
+  height: 90px;
+  width: 200px;
   color: #fff;
 }
 button{
-  height: 70px;
-  width: 80px;
+  height: 90px;
+  width: 100px;
   /* background-color: rgba(0, 0, 0, 0.791); */
   background-color: rgba(90,110,107,0.27);
   /* color: #fff; */
-  font-size: 25px;
+  font-size: 30px;
 }
 button:hover{
   background-color: rgba(0, 0, 0, 0.792);
   color: #fff;
 }
 .space{
-  height: 100px;
-  width: 320px;
+  height: 130px;
+  width: 400px;
   background-color: rgba(0, 0, 0, 0.791);
   color: #fff;
   border-radius: 15px 15px 0 0;
 }
 .space p{
-  font-size: 30px;
+  font-size: 35px;
   padding-left: 10px;
   padding-top: 10px;
   /* background-color: rgba(0, 0, 0, 0.791); */
