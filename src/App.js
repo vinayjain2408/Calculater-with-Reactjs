@@ -43,8 +43,10 @@ function App() {
         <p>{result}</p>
       </div>
       <div className='first-line'>
-        <button className='clear' onClick={handleClear}>AC</button>
-        <button onClick={() => updateCalc("()")}>()</button>
+      {/* <button onClick={handledelte}><BackspaceIcon /> </button> */}
+      <button onClick={handledelte}>del</button>
+        <button onClick={calculate}>=</button>
+  
         <button onClick={() => updateCalc("%")}>%</button>
         <button onClick={() => updateCalc("/")}>/</button>
       </div>
@@ -69,8 +71,8 @@ function App() {
       <div className='fiveth-line'>
         <button onClick={() => updateCalc('0')}>0</button>
         <button onClick={() => updateCalc('.')}>.</button>
-        <button onClick={handledelte}><BackspaceIcon /> </button>
-        <button onClick={calculate}>=</button>
+        <button className='clear' onClick={handleClear}>Clear</button>
+        
       </div>
 
     </div>

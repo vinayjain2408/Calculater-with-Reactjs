@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* background-color: rgb(228, 200, 100); */
 }
 .box{
   height: 100vh;
@@ -14,6 +15,9 @@
 
 .clear{
   background-color: green;
+  height: 70px;
+  width: 160px;
+  color: #fff;
 }
 button{
   height: 70px;
@@ -32,9 +36,11 @@ button:hover{
   width: 320px;
   background-color: rgba(0, 0, 0, 0.791);
   color: #fff;
+  border-radius: 15px 15px 0 0;
 }
 .space p{
   font-size: 30px;
   padding-left: 10px;
   padding-top: 10px;
+  /* background-color: rgba(0, 0, 0, 0.791); */
 }
